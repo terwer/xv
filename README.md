@@ -19,7 +19,7 @@ scrapy runspider myspider.py -o myspider.csv
 xv
 
 ```bash
-scrapy runspider xv.py 
-scrapy runspider xv.py -o xv.json
-scrapy runspider xv.py -o xv.csv
+scrapy runspider xvideos.py 
+scrapy runspider xvideos.py -o xvideos.json
+scrapy runspider xvideos.py -o xvideos.csv
 ```
