@@ -1,9 +1,9 @@
 import scrapy
 
 
-class XVSpider(scrapy.Spider):
+class XvSpider(scrapy.Spider):
     name = 'xvspider'
-    start_urls = ['https://www.xvideos.com']
+    start_urls = ['https://xvideos.com']
 
     def parse(self, response):
         res = response.text

@@ -15,3 +15,11 @@ scrapy runspider myspider.py
 scrapy runspider myspider.py -o myspider.json
 scrapy runspider myspider.py -o myspider.csv
 ```
+
+xv
+
+```bash
+scrapy runspider xv.py 
+scrapy runspider xv.py -o xv.json
+scrapy runspider xv.py -o xv.csv
+```
