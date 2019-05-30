@@ -22,8 +22,8 @@ class DBHelper:
         )
         # **表示将字典扩展为关键字参数,相当于host=xxx,db=yyy....
         dbpool = adbapi.ConnectionPool('pymysql', **dbparams)
-
         self.dbpool = dbpool
+        print("初始化MySQL数据库完成")
 
     def connect(self):
         return self.dbpool
@@ -37,10 +37,10 @@ class DBHelper:
         query = self.dbpool.runInteraction(self._conditional_insert_t1, sql, item)
         # 调用异常处理方法
         query.addErrback(self._handle_error)
+        print("插入数据")
         return item
 
     # 写入数据库中
-    @staticmethod
     def _conditional_insert_t1(tx, sql, item):
         item['created_at'] = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
         params = (
@@ -48,9 +48,9 @@ class DBHelper:
             item['created_at']
         )
         tx.execute(sql, params)
+        print("SQL执行完毕")
 
     # 错误处理方法
-    @staticmethod
     def _handle_error(failue):
         print('--------------database operation exception!!-----------------')
         print(failue)

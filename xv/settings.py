@@ -64,9 +64,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'xv.pipelines.XvPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'xv.pipelines.XvPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -88,3 +88,10 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+#Mysql数据库的配置信息
+MYSQL_HOST = 'terwergreen.com'
+MYSQL_DBNAME = 'xvideos'         #数据库名字，请修改
+MYSQL_USER = 'root'              #数据库账号，请修改
+MYSQL_PASSWD = '123456'          #数据库密码，请修改
+MYSQL_PORT = 3306                #数据库端口，在dbhelper中使用

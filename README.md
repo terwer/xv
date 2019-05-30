@@ -5,7 +5,7 @@ A scrapy project
 ## project
 
 ```bash
-
+scrapy crawl xv
 ```
 
 ## simgle file
